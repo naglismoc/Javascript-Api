@@ -2,9 +2,9 @@
 
 
 
-renderTable('https://jsonplaceholder.typicode.com/users', 'stalas');
+renderTable('https://jsonplaceholder.typicode.com/users', 'stalas', ["table,ol,ul"]);
 
-function renderTable(url, id) {
+function renderTable(url, id, order) {
     axios.get(url)
         .then(function(response) {
             let table = document.getElementById(id);
