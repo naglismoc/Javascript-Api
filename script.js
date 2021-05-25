@@ -12,11 +12,28 @@ axios.get('https://jsonplaceholder.typicode.com/users')
                   <td> ${user.username} </td>
                   <td> ${user.email} </td>
                   <td> ${user.phone} </td>
-                  <td> ${user.website} </td>`;
-
-            HTML += `<td> ${JSON.stringify(user.company)} </td>
-                  <td> ${JSON.stringify(user.address)} </td>
-                  <td> <ul><li></li></ul> </td>
+                  <td> ${user.website} </td>
+                  <td>
+                    <ul>
+                      <li>${user.company.name}</li>
+                      <li>${user.company.catchPhrase}</li>
+                      <li>${user.company.bs}</li> 
+                    </ul>
+                  </td>
+                  <td>
+                    <ol>
+                      <li>${user.address.city}</li>
+                      <li>${user.address.street}</li>
+                      <li>${user.address.suite}</li> 
+                      <li>${user.address.zipcode}</li> 
+                      <li>
+                        <ul>
+                          <li>${user.address.geo.lat}</li> 
+                          <li>${user.address.geo.lng}</li> 
+                        </ul>
+                      </li> 
+                    </ol>
+                  </td>
                 </tr>`;
         });
         table.innerHTML += HTML;
