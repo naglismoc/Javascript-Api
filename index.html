@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,46 @@
     <title>Javacript Api Call Demo</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="./script.js"></script>
-    
+
 </head>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
 <body>
     <h2>User names</h2>
-    <ul>
-        <li>Jaunius</li>
-        <li>Pinelis</li>
-    </ul>
+    <table id="table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>website</th>
+            <th>company</th>
+            <th>address</th>
+            <th>test</th>
+        </tr>
+
+
+
+    </table>
+    <script src="./script.js"></script>
 </body>
+
 </html>
