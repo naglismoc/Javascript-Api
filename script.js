@@ -3,7 +3,20 @@ axios.get('https://jsonplaceholder.typicode.com/users')
     .then(function(response) {
         console.log(response.data);
         let table = document.getElementById('table');
-        let HTML = "";
+        let HTML = `        
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>username</th>
+          <th>email</th>
+          <th>phone</th>
+          <th>website</th>
+          <th>company</th>
+          <th>address</th>
+          <th>test</th>
+        </tr>`;
+
+        // console.log(Object.values(response.data[0]));
         response.data.forEach(user => {
             HTML +=
                 `<tr>
@@ -36,7 +49,7 @@ axios.get('https://jsonplaceholder.typicode.com/users')
                   </td>
                 </tr>`;
         });
-        table.innerHTML += HTML;
+        table.innerHTML = HTML;
 
     })
     .catch(function(error) {
